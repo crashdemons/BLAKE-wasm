@@ -67,7 +67,7 @@ var blake = {
      */
     update: function(contextObject, bytes){
         var inputBuffer = this.internal.bufferFromBytes(bytes);
-        let bitLength = bytes.length*8; //param databitlen: [data portion's] length in bits
+        let bitLength = bytes.length; //param databitlen: [data portion's] length in bits
         this.internal.update(contextObject.context, inputBuffer, bitLength);
         this.internal.destroy_buffer(inputBuffer);
     },
