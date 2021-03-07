@@ -2833,6 +2833,9 @@ var _malloc = Module["_malloc"] = createExportWrapper("malloc");
 var _blake_update_easy = Module["_blake_update_easy"] = createExportWrapper("blake_update_easy");
 
 /** @type {function(...*):?} */
+var _blake_final_easy = Module["_blake_final_easy"] = createExportWrapper("blake_final_easy");
+
+/** @type {function(...*):?} */
 var _blake_cleanup_easy = Module["_blake_cleanup_easy"] = createExportWrapper("blake_cleanup_easy");
 
 /** @type {function(...*):?} */
