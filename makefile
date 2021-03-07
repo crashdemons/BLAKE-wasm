@@ -1,6 +1,6 @@
-CC=gcc
+CC=clang++
 CFLAGS= -Wall
-BIN  =  blake224 blake256 blake384 blake512
+BIN  =  blake_easy_stub.o blake224 blake256 blake384 blake512
 
 all:			$(BIN)
 			@echo "Checking test vectors"	

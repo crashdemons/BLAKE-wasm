@@ -1,18 +1,12 @@
-# Object files
+build/
+test
+test2
 *.o
-*.ko
+a.out*
 
-# Libraries
-*.lib
-*.a
+/blake224
+/blake256
+/blake384
+/blake512
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
+/nbproject/private/

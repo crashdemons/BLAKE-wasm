@@ -10,9 +10,11 @@
    You should have received a copy of the CC0 Public Domain Dedication along with
    this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
+#pragma once
 #include <string.h>
 #include <stdio.h>
 #include <stdint.h>
+#include "emscripten_stub.hpp"
 
 #define U8TO32_BIG(p)					      \
   (((uint32_t)((p)[0]) << 24) | ((uint32_t)((p)[1]) << 16) |  \

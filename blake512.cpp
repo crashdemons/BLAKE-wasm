@@ -10,7 +10,7 @@
    You should have received a copy of the CC0 Public Domain Dedication along with
    this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
-#include "blake.h"
+#include "blake512.hpp"
 
 void blake512_compress( state512 *S, const uint8_t *block )
 {
@@ -225,6 +225,7 @@ void blake512_test()
   if ( v ) printf( "test 2 error\n" );
 }
 
+#ifndef __EMSCRIPTEN__
 int main( int argc, char **argv )
 {
 #define BLOCK512 64
@@ -267,3 +268,4 @@ int main( int argc, char **argv )
 
   return 0;
 }
+#endif
