@@ -8,6 +8,8 @@ cryptographic hash functions composed of 4 instances:
 * BLAKE-384
 * BLAKE-512
 
+Live demo: https://crashdemons.github.io/BLAKE-wasm/
+
 These implementations aim to simplicity and compactness rather than
 performance.
 
