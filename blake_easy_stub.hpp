@@ -12,7 +12,7 @@ typedef struct blake_state_easy{
 } blake_state_easy;
 
 
-LIBRARY_EXTERN blake_state_easy* blake_init_easy(int d);
+LIBRARY_EXTERN blake_state_easy* blake_init_easy(unsigned int d);
 
 LIBRARY_EXTERN void blake_update_easy(blake_state_easy* ctx, const uint8_t *in, uint64_t inlen);
 

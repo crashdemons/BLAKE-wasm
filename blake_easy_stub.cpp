@@ -6,7 +6,7 @@ void* mallocz(size_t size){
 	return p;
 }
 
-blake_state_easy* blake_init_easy(int digestBits){
+blake_state_easy* blake_init_easy(unsigned int digestBits){
 	blake_state_easy* ctx = (blake_state_easy*) mallocz(sizeof(blake_state_easy));
 	ctx->bitlength = digestBits;
 	switch(ctx->bitlength){
@@ -62,5 +62,5 @@ void blake_cleanup_easy(blake_state_easy* ctx){
 }
 
 int version(){
-    return 2021030601;
+    return 2021030602;
 }
