@@ -86,9 +86,18 @@ async function hashStringDebug(inputText,digestSize){
         <div id="results"></div>
         <hr>
         Known-good example outputs:
-<div>blake(512,"test") = 'd96ce883f4632f826b3bb553fe5cbff8fb00b32b3534b39aa0c0899d1199a8cf28d77e49f2465517dfb12c0f3268b90f8a13d94e6730a74ed2e8312242a9e937'</div>
-<div>blake(256,'test') = '93c8a7d0ff132f325138a82b2baa98c12a7c9ac982feb6c5b310a1ca713615bd'</div>
-<div>blake(128,'test') = 'a133b0efa199156be653427c6ab85d3d'</div>
+BLAKE-224("") =
+7dc5313b1c04512a174bd6503b89607aecbee0903d40a8a569c94eed<br>
+BLAKE-256("") =
+716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a<br>
+BLAKE-384("") =
+c6cbd89c926ab525c242e6621f2f5fa73aa4afe3d9e24aed727faaadd6af38b620bdb623dd2b4788b1c8086984af8706<br>
+BLAKE-512("") =
+a8cfbbd73726062df0c6864dda65defe58ef0cc52a5625090fa17601e1eecd1b628e94f396ae402a00acc9eab77b4d4c2e852aaaa25a636d80af3fc7913ef5b8<br>
+BLAKE-512("The quick brown fox jumps over the lazy dog") =
+1f7e26f63b6ad25a0896fd978fd050a1766391d2fd0471a77afb975e5034b7ad2d9ccf8dfb47abbbe656e1b82fbc634ba42ce186e8dc5e1ce09a885d41f43451<br>
+BLAKE-512("The quick brown fox jumps over the lazy dof") =
+a701c2a1f9baabd8b1db6b75aee096900276f0b86dc15d247ecc03937b370324a16a4ffc0c3a85cd63229cfa15c15f4ba6d46ae2e849ed6335e9ff43b764198a<br>
     </body>
 </html>
 
