@@ -1,7 +1,7 @@
 BLAKE
 =====
 
-Reference implementation of the SHA-3 finalist BLAKE, a family of
+Webassembly(WASM) / Reference implementation of the SHA-3 finalist BLAKE, a family of
 cryptographic hash functions composed of 4 instances:
 * BLAKE-224
 * BLAKE-256
@@ -18,9 +18,16 @@ Luca Henzen, Willi Meier, and Raphael C.-W. Phan.
 its [own code repo](https://github.com/BLAKE2/BLAKE2).
 
 
-Usage
+Usage (WASM)
 -----
 
+Running `./build.sh` will build:
+ - a Webassembly loader script `dist/blake.js` and
+ - the webassembly binary `dist/blake.wasm` and finally
+ - a `dist/blake-wrapped.js` script which combines a loader with a `blake` javascript object with more accessible methods. (supports standard init/update/final/cleanup methods, as well as easier digest/digestHex methods).
+
+Usage (C++)
+-----
 Running
 
 ```sh
