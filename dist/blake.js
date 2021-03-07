@@ -2824,10 +2824,10 @@ var _blake512_update = Module["_blake512_update"] = createExportWrapper("blake51
 var _blake512_final = Module["_blake512_final"] = createExportWrapper("blake512_final");
 
 /** @type {function(...*):?} */
-var _blake_init_easy = Module["_blake_init_easy"] = createExportWrapper("blake_init_easy");
+var _malloc = Module["_malloc"] = createExportWrapper("malloc");
 
 /** @type {function(...*):?} */
-var _malloc = Module["_malloc"] = createExportWrapper("malloc");
+var _blake_init_easy = Module["_blake_init_easy"] = createExportWrapper("blake_init_easy");
 
 /** @type {function(...*):?} */
 var _blake_update_easy = Module["_blake_update_easy"] = createExportWrapper("blake_update_easy");

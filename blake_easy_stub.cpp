@@ -1,25 +1,31 @@
 #include "blake_easy_stub.hpp"
 
+void* mallocz(size_t size){
+	void* p = malloc(size);
+	memset(p, 0, size);
+	return p;
+}
+
 blake_state_easy* blake_init_easy(int digestBits){
-	blake_state_easy* ctx = (blake_state_easy*) malloc(sizeof(blake_state_easy));
+	blake_state_easy* ctx = (blake_state_easy*) mallocz(sizeof(blake_state_easy));
 	ctx->bitlength = digestBits;
 	switch(ctx->bitlength){
 		case 224:
-			ctx->internal_state = malloc(sizeof(state224));
+			ctx->internal_state = mallocz(sizeof(state224));
 			blake224_init((state224*) ctx->internal_state);
 			break;
 		case 256:
-			ctx->internal_state = malloc(sizeof(state256));
+			ctx->internal_state = mallocz(sizeof(state256));
 			blake256_init((state256*) ctx->internal_state);
 			break;
 		case 384:
-			ctx->internal_state = malloc(sizeof(state384));
+			ctx->internal_state = mallocz(sizeof(state384));
 			blake384_init((state384*) ctx->internal_state);
 			break;
 		case 512:
 		default:
 			ctx->bitlength = 512;//if it wasn't already set to this
-			ctx->internal_state = malloc(sizeof(state512));
+			ctx->internal_state = mallocz(sizeof(state512));
 			blake512_init((state512*) ctx->internal_state);
 			break;
 	}
@@ -56,5 +62,5 @@ void blake_cleanup_easy(blake_state_easy* ctx){
 }
 
 int version(){
-    return 20210306;
+    return 2021030601;
 }
