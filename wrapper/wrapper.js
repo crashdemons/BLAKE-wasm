@@ -139,9 +139,9 @@ createBlakeModule().then(async module => {
     blake.version= module.cwrap('version', 'number', []);
     blake.internal.create_buffer= module.cwrap('malloc', 'number', ['number']);
     blake.internal.destroy_buffer= module.cwrap('free', '', ['number']);
-    blake.internal.init= module.cwrap('blake_init_easy', '', ['number']);
-    blake.internal.update= module.cwrap('blake_update_easy', 'number', ['number','number','number']);
-    blake.internal.final= module.cwrap('blake_final_easy', 'number', ['number','number']);
+    blake.internal.init= module.cwrap('blake_init_easy', 'number', ['number']);
+    blake.internal.update= module.cwrap('blake_update_easy', '', ['number','number','number']);
+    blake.internal.final= module.cwrap('blake_final_easy', '', ['number','number']);
     blake.internal.cleanup= module.cwrap('blake_cleanup_easy', '', ['number']);
     blake.internal.module = module;
 });
