@@ -1,5 +1,5 @@
-rm -rf blake-wasm-dist
-mkdir blake-wasm-dist
+rm -rf dist
+mkdir dist
 
 BIN="blake224.cpp blake256.cpp blake384.cpp blake512.cpp"
 
